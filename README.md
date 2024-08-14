@@ -6,10 +6,7 @@ This document provides instructions on how to run the Spring Boot application, i
 
 #### A database schema with table is required in database. I have ran the following query in mysql.
 
-
-<div class="code-container">
-    <button class="copy-btn" onclick="copyToClipboard('sql-file')">Copy</button>
-    <pre id="sql-file">
+```bash
 -- SQL schema for the article_blob database
 
 CREATE DATABASE article_blob;
@@ -21,8 +18,7 @@ id BIGINT AUTO_INCREMENT PRIMARY KEY,
 title VARCHAR(255) NOT NULL,
 content BLOB
 );
-</pre>
-</div>
+```
 ## Configuration Files
 
 ### `application.properties`
@@ -31,72 +27,14 @@ To configure the Spring Boot application, use the following properties in your `
 #### Replace url with your schema url if you are using other than article_blob.
 #### Replace with your username and password.
 
-
-<div class="code-container">
-    <button class="copy-btn" onclick="copyToClipboard('application-properties')">Copy</button>
-    <pre id="application-properties">
+```bash
 spring.datasource.url = jdbc:mysql://localhost:3306/article_blob
 spring.datasource.username = root
 spring.datasource.password = password
 
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL8Dialect
 spring.jpa.hibernate.ddl-auto = update
-</pre>
-</div>
-
-<style>
-.code-container {
-   font-size: 12px;
-    position: relative;
-    border-radius: 4px;
-    padding: 10px;
-    margin-top: 10px;
-    font-family: monospace;
-
-}
-.code-container pre {
-    margin: 0;
-    white-space: pre-wrap;
-    word-break: break-word;
-}
-.code-container .copy-btn {
-    position: absolute;
-    right: 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 12px;
-    z-index: 10;
-}
-.code-container .copy-btn:hover {
-    background-color: #0056b3;
-}
-.filename {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-</style>
-
-<script>
-function copyToClipboard(id) {
-    const codeElement = document.getElementById(id);
-    const range = document.createRange();
-    range.selectNode(codeElement);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    try {
-        document.execCommand('copy');
-        alert('Code copied to clipboard!');
-    } catch (err) {
-        console.error('Failed to copy code: ', err);
-    }
-    window.getSelection().removeAllRanges();
-}
-</script>
-
+```
 ## Running the Spring Boot Application
 
 To start the Spring Boot application, follow these steps:
