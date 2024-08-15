@@ -48,7 +48,7 @@ To start the Spring Boot application, follow these steps:
    This will start the application on `localhost:8080`.
 
 
-![Springboot Screenshot](/Users/prakashkafle/code/spring-boot-project/jsontoblob/assets/ss/spring-boot.png)
+![Springboot Screenshot](assets/ss/spring-boot.png)
 
 
 2. **Send a POST Request**: Use Postman to send a POST request to `http://localhost:8080/article/save`.
@@ -56,7 +56,7 @@ To start the Spring Boot application, follow these steps:
    **Sample Request Body: Use file article.json from assets folder**
 
 
-![Postman Screenshot](/Users/prakashkafle/code/spring-boot-project/jsontoblob/assets/ss/postman.png)
+![Postman Screenshot](assets/ss/postman.png)
 
 3. **Verify your database** : See if the content is stored as blob
 4.
@@ -64,5 +64,5 @@ To start the Spring Boot application, follow these steps:
    select * from article;
  ```
 
-![Database Screenshot](/Users/prakashkafle/code/spring-boot-project/jsontoblob/assets/ss/db.png)
+![Database Screenshot](assets/ss/db.png)
 
