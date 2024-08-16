@@ -13,7 +13,7 @@ CREATE DATABASE article_blob;
 
 USE article_blob;
 
-CREATE TABLE IF NOT EXISTS articles (
+CREATE TABLE IF NOT EXISTS article (
 id BIGINT AUTO_INCREMENT PRIMARY KEY,
 title VARCHAR(255) NOT NULL,
 content BLOB
@@ -80,6 +80,8 @@ To start the Spring Boot application, follow these steps:
 This request get all the data from the database and converts into json.
 
 ![Postman Screenshot](assets/ss/get_postman.png)
+
+
 
 
 
