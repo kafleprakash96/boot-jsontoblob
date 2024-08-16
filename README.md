@@ -39,7 +39,7 @@ spring.jpa.hibernate.ddl-auto = update
 
 To start the Spring Boot application, follow these steps:
 
-1. **Build and Run**: Open your terminal, navigate to your project directory, and run the following command:
+ **Build and Run**: Open your terminal, navigate to your project directory, and run the following command:
 
     ```bash
     ./mvnw spring-boot:run
@@ -50,19 +50,29 @@ To start the Spring Boot application, follow these steps:
 
 ![Springboot Screenshot](assets/ss/spring-boot.png)
 
+*** **_GET REQUEST_**
 
-2. **Send a POST Request**: Use Postman to send a POST request to `http://localhost:8080/article/save`.
+   **Send a POST Request**: Use Postman to send a POST request to `http://localhost:8080/article/save`.
 
    **Sample Request Body: Use file article.json from assets folder**
 
 
-![Postman Screenshot](assets/ss/postman.png)
+![Postman Screenshot](assets/ss/post_postman.png)
 
-3. **Verify your database** : See if the content is stored as blob
-4.
+**Verify your database** : See if the content is stored as blob
  ```bash
    select * from article;
  ```
 
 ![Database Screenshot](assets/ss/db.png)
+
+
+*** **_GET REQUEST_** 
+
+**Send a** **GET** **Request**: Use Postman to send a GET request to `http://localhost:8080/article/1`.
+
+This request get all the data from the database and converts into json.
+
+![Postman Screenshot](assets/ss/get_postman.png)
+
 
