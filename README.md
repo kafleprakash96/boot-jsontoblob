@@ -50,9 +50,15 @@ To start the Spring Boot application, follow these steps:
 
 ![Springboot Screenshot](assets/ss/spring-boot.png)
 
-*** **_GET REQUEST_**
+*** **_POST REQUEST_**
 
    **Send a POST Request**: Use Postman to send a POST request to `http://localhost:8080/article/save`.
+
+   _This request will get all the json data into database._
+
+   _**key in json file is stored as column and their value are stored as row.
+   title and author are stored as string(varchar) and content is stored as blob.**_
+   
 
    **Sample Request Body: Use file article.json from assets folder**
 
@@ -74,5 +80,7 @@ To start the Spring Boot application, follow these steps:
 This request get all the data from the database and converts into json.
 
 ![Postman Screenshot](assets/ss/get_postman.png)
+
+
 
 
