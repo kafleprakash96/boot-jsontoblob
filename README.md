@@ -82,3 +82,5 @@ This request get all the data from the database and converts into json.
 ![Postman Screenshot](assets/ss/get_postman.png)
 
 
+
+
